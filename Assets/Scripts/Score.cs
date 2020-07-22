@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour
@@ -18,8 +19,18 @@ public class Score : MonoBehaviour
             {
                 return;
             }
-            // Display score ("0") for 0 decimals
-            scoreText.text = (player.position.z + (foodScore * gameManager.foodEaten)).ToString("0");
+
+            if (SceneManager.GetActiveScene().name != "LevelInf")
+            {
+                // Display score ("0") for 0 decimals
+                scoreText.text = (player.position.z + (foodScore * gameManager.foodEaten)).ToString("0");
+            }
+
+            else
+            {
+                scoreText.text = (Time.timeSinceLevelLoad + (gameManager.foodEaten)).ToString("0");
+            }
+            
         }
     }
 }

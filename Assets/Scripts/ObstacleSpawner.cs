@@ -85,11 +85,11 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnWall()
     {
-        int randomNum = Random.Range(0, spawnPoints.Length);
+        int randomNum = Random.Range(1, spawnPoints.Length - 1);
 
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            if (i != randomNum)
+            if (i != randomNum && i != randomNum + 1)
             {
                 // Quaternion.identity = do no rotation
                 Instantiate(obstacle, spawnPoints[i].position, Quaternion.identity);
@@ -100,21 +100,21 @@ public class ObstacleSpawner : MonoBehaviour
     }
 
     void SpawnZigZag() {
-        Instantiate(zigzag, spawnPoints[0].position + zigzag.transform.position, Quaternion.identity);
+        Instantiate(zigzag, spawnPoints[3].position + zigzag.transform.position, Quaternion.identity);
 
         timeBetweenSpawnsAdder = timeBetweenZigZags;
     }
 
     void SpawnSlideRight()
     {
-        Instantiate(slide, spawnPoints[0].position + slide.transform.position, Quaternion.identity);
+        Instantiate(slide, spawnPoints[3].position + slide.transform.position, Quaternion.identity);
 
         timeBetweenSpawnsAdder = timeBetweenSlides;
     }
 
     void SpawnSlideLeft()
     {
-        Instantiate(slide, spawnPoints[0].position + slide.transform.position + new Vector3(-4, 0, 0), Quaternion.Euler(0f, 0f, 180f));
+        Instantiate(slide, spawnPoints[3].position + slide.transform.position + new Vector3(-4, 0, 0), Quaternion.Euler(0f, 0f, 180f));
 
         timeBetweenSpawnsAdder = timeBetweenSlides;
     }

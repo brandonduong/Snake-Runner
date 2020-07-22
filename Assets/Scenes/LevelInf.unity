@@ -211,15 +211,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
+  - {fileID: 772287089}
+  - {fileID: 63812002}
+  - {fileID: 784688794}
   - {fileID: 1900605000}
   - {fileID: 1453853723}
   - {fileID: 1337858527}
   - {fileID: 118334028}
-  - {fileID: 784688794}
-  - {fileID: 63812002}
-  - {fileID: 772287089}
   obstacle: {fileID: 1808048359686113485, guid: 532fa787a6e80744db80b4327c8731f6,
     type: 3}
+  zigzag: {fileID: 8772166353214157385, guid: 017ea7629e17b7b4ab23e94de4390bf1, type: 3}
+  slide: {fileID: 5954529481568668397, guid: d1c59d33b73bab042a54f094d7cd006e, type: 3}
+  obstaclesNum: 3
+  speedupIntervals: 10
+  speedup: {x: 0, y: 0, z: -5}
 --- !u!4 &424356037
 Transform:
   m_ObjectHideFlags: 0
@@ -1091,6 +1096,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9052079553030206656, guid: 9be04e6b42f069e478083d05f56d0b20,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 48
+      objectReference: {fileID: 0}
     - target: {fileID: 9052079553030206657, guid: 9be04e6b42f069e478083d05f56d0b20,
         type: 3}
       propertyPath: m_LocalPosition.x

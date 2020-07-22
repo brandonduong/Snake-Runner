@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class SnakeMovement : MonoBehaviour
 {
@@ -38,7 +39,7 @@ public class SnakeMovement : MonoBehaviour
         }
 
         // If position changes, store it
-        else if (storedPositions[storedPositions.Count - 1] != player.transform.position)
+        else if (storedPositions[storedPositions.Count - 1] != player.transform.position || SceneManager.GetActiveScene().name == "LevelInf")
         {
             storedPositions.Add(player.transform.position); //store the position every frame
         }
@@ -46,7 +47,15 @@ public class SnakeMovement : MonoBehaviour
         // Once delay is reached, move
         if (storedPositions.Count > followDistance)
         {
-            transform.position = storedPositions[0];
+            // If infinite mode, diff behaviour
+            if (SceneManager.GetActiveScene().name == "LevelInf")
+            {
+                transform.position = new Vector3(storedPositions[0].x, player.transform.position.y, player.transform.position.z - ((followDistance / 5) + 0.3f));
+            }
+            else
+            {
+                transform.position = storedPositions[0];
+            }
             storedPositions.RemoveAt(0);
         }
     }

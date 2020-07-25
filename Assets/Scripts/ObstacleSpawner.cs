@@ -10,6 +10,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject obstacle;
     public GameObject zigzag;
     public GameObject slide;
+    public GameObject penguin;
 
     public int obstaclesNum = 4;
 
@@ -48,8 +49,6 @@ public class ObstacleSpawner : MonoBehaviour
             // Randomly create an obstacle
             int randomNum = Random.Range(0, obstaclesNum);
 
-            Debug.Log(randomNum);
-
             switch (randomNum)
             {
                 case 0:
@@ -66,6 +65,10 @@ public class ObstacleSpawner : MonoBehaviour
 
                 case 3:
                     SpawnSlideLeft();
+                    break;
+
+                case 4:
+                    SpawnPenguins();
                     break;
             }
 
@@ -117,5 +120,14 @@ public class ObstacleSpawner : MonoBehaviour
         Instantiate(slide, spawnPoints[3].position + slide.transform.position + new Vector3(-4, 0, 0), Quaternion.Euler(0f, 0f, 180f));
 
         timeBetweenSpawnsAdder = timeBetweenSlides;
+    }
+
+    void SpawnPenguins()
+    {
+        for (int i = 0; i < spawnPoints.Length; i++)
+        {
+            // Quaternion.identity = do no rotation
+            Instantiate(penguin, spawnPoints[i].position, Quaternion.identity);
+        }
     }
 }

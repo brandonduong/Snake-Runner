@@ -222,7 +222,7 @@ MonoBehaviour:
     type: 3}
   zigzag: {fileID: 8772166353214157385, guid: 017ea7629e17b7b4ab23e94de4390bf1, type: 3}
   slide: {fileID: 5954529481568668397, guid: d1c59d33b73bab042a54f094d7cd006e, type: 3}
-  obstaclesNum: 3
+  obstaclesNum: 4
   speedupIntervals: 10
   speedup: {x: 0, y: 0, z: -5}
 --- !u!4 &424356037

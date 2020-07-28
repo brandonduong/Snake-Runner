@@ -13,6 +13,9 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject penguin;
     public GameObject fish;
     public GameObject barrel;
+    public GameObject largeWallL;
+    public GameObject largeWallR;
+    public GameObject bouncyBall;
 
     public int obstaclesNum = 4;
 
@@ -29,8 +32,10 @@ public class ObstacleSpawner : MonoBehaviour
     float timeBetweenWalls = 0f;
 
     float timeBetweenZigZags = 0.5f;
-    
+
     float timeBetweenSlides = 1f;
+
+    float timeBetweenBalls = 0.5f;
 
     int numFish = 30;
     int fishOffset = -3;
@@ -78,6 +83,18 @@ public class ObstacleSpawner : MonoBehaviour
 
                 case 5:
                     SpawnBarrels();
+                    break;
+
+                case 6:
+                    SpawnLargeWallL();
+                    break;
+
+                case 7:
+                    SpawnLargeWallR();
+                    break;
+
+                case 8:
+                    SpawnBouncyBalls();
                     break;
             }
 
@@ -156,6 +173,31 @@ public class ObstacleSpawner : MonoBehaviour
             Instantiate(barrel, spawnPoints[4].position + new Vector3(0, o * 4f, -5), Quaternion.identity);
             Instantiate(barrel, spawnPoints[5].position + new Vector3(0, o * 4f, 0), Quaternion.identity);
             Instantiate(barrel, spawnPoints[6].position + new Vector3(0, o * 4f, -5), Quaternion.identity);
+        }
+    }
+
+    void SpawnLargeWallL()
+    {
+        Instantiate(largeWallL, spawnPoints[3].position + new Vector3(0, 1, 0), Quaternion.identity);
+    }
+
+    void SpawnLargeWallR()
+    {
+        Instantiate(largeWallR, spawnPoints[3].position + new Vector3(0, 1, 0), Quaternion.Euler(-90f, 0f, 0f));
+    }
+
+    void SpawnBouncyBalls()
+    {
+        timeBetweenSpawnsAdder = 0;
+
+        for (int i = 0; i < Random.Range(5, 10); i++)
+        {
+            int randomNum = Random.Range(0, spawnPoints.Length);
+
+            Instantiate(bouncyBall, spawnPoints[randomNum].position + new Vector3(0, (1f * i), 0 + (15 * i)), Quaternion.identity);
+            
+            // More balls = more time delay
+            timeBetweenSpawnsAdder += timeBetweenBalls;
         }
     }
 }

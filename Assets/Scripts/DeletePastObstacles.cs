@@ -2,7 +2,7 @@
 
 public class DeletePastObstacles : MonoBehaviour
 {
-    public GameObject camera;
+    public new GameObject camera;
 
     private void Awake()
     {

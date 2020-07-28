@@ -16,7 +16,7 @@ public class FoodCollision : MonoBehaviour
             Destroy(gameObject);
 
             // Create 1 segment of snake
-            Instantiate(segment, new Vector3(0, 0, -100), Quaternion.identity);
+            Instantiate(segment, new Vector3(100, 0, -100), Quaternion.identity);
         }
     }
 }

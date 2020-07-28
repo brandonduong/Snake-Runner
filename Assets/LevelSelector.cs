@@ -5,6 +5,6 @@ public class LevelSelector : MonoBehaviour
 {
     public void Select(string levelName)
     {
-        SceneManager.LoadScene(levelName);
+        FindObjectOfType<FadeInOut>().FadeToScene(levelName);
     }
 }

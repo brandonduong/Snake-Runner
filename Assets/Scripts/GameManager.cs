@@ -10,11 +10,19 @@ public class GameManager : MonoBehaviour
 
     public GameObject levelCompleteUI;
     public GameObject levelFailedUI;
+    public GameObject foodEatenUpUI;
 
     public void FoodEaten()
     {
         foodEaten += 1;
+        foodEatenUpUI.SetActive(true);
+        Invoke("HideFoodUpUI", 0.5f); // Delay is in seconds
         Debug.Log("Eaten " + foodEaten.ToString() + " food.");
+    }
+
+    public void HideFoodUpUI()
+    {
+        foodEatenUpUI.SetActive(false);
     }
 
     public void EndGame()

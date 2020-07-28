@@ -542,6 +542,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2190617971015243749, guid: 165426bcba5489d42aace2e5844a4017,
+        type: 3}
+      propertyPath: m_FontData.m_BestFit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2190617971015243749, guid: 165426bcba5489d42aace2e5844a4017,
+        type: 3}
+      propertyPath: m_Text
+      value: +1
+      objectReference: {fileID: 0}
     - target: {fileID: 2426317094660000378, guid: 165426bcba5489d42aace2e5844a4017,
         type: 3}
       propertyPath: player
@@ -662,7 +672,14 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8220319521260081733, guid: 165426bcba5489d42aace2e5844a4017,
+        type: 3}
+      propertyPath: foodScore
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1906037679330274519, guid: 165426bcba5489d42aace2e5844a4017, type: 3}
+    - {fileID: 8220319521260081733, guid: 165426bcba5489d42aace2e5844a4017, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 165426bcba5489d42aace2e5844a4017, type: 3}
 --- !u!1 &2426317094713876337 stripped
 GameObject:
@@ -670,6 +687,38 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2426317094713876336}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2426317094713876338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8500715546410844303, guid: 165426bcba5489d42aace2e5844a4017,
+    type: 3}
+  m_PrefabInstance: {fileID: 2426317094713876336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2426317094713876339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426317094713876338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b999478897120f84080a57aeb4eeac62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2426317094713876340}
+  foodScore: 1
+--- !u!114 &2426317094713876340 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2190617971015243749, guid: 165426bcba5489d42aace2e5844a4017,
+    type: 3}
+  m_PrefabInstance: {fileID: 2426317094713876336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2426317094713876338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2510574487570294995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,6 +860,11 @@ PrefabInstance:
       propertyPath: levelFailedUI
       value: 
       objectReference: {fileID: 2426317094713876337}
+    - target: {fileID: 5004760512117370458, guid: f476c91e78ed5a4428ed7d6559808819,
+        type: 3}
+      propertyPath: foodEatenUpUI
+      value: 
+      objectReference: {fileID: 2426317094713876338}
     - target: {fileID: 5004760512117370459, guid: f476c91e78ed5a4428ed7d6559808819,
         type: 3}
       propertyPath: m_Name

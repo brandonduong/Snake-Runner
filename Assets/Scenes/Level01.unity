@@ -8259,6 +8259,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7304cef13e07bab4fa1833e800c76097, type: 3}
+--- !u!1 &1067070854 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8500715546410844303, guid: 165426bcba5489d42aace2e5844a4017,
+    type: 3}
+  m_PrefabInstance: {fileID: 2426317094713876336}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1067070856 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2190617971015243749, guid: 165426bcba5489d42aace2e5844a4017,
+    type: 3}
+  m_PrefabInstance: {fileID: 2426317094713876336}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067070854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1068198257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16485,6 +16503,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8220319521260081733, guid: 165426bcba5489d42aace2e5844a4017,
+        type: 3}
+      propertyPath: foodScore
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8220319521260081733, guid: 165426bcba5489d42aace2e5844a4017,
+        type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 1067070856}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 165426bcba5489d42aace2e5844a4017, type: 3}
 --- !u!1001 &2510574487570294995
@@ -16628,6 +16656,11 @@ PrefabInstance:
       propertyPath: levelFailedUI
       value: 
       objectReference: {fileID: 2061500453}
+    - target: {fileID: 5004760512117370458, guid: f476c91e78ed5a4428ed7d6559808819,
+        type: 3}
+      propertyPath: foodEatenUpUI
+      value: 
+      objectReference: {fileID: 1067070854}
     - target: {fileID: 5004760512117370459, guid: f476c91e78ed5a4428ed7d6559808819,
         type: 3}
       propertyPath: m_Name

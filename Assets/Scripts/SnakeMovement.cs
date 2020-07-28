@@ -47,15 +47,7 @@ public class SnakeMovement : MonoBehaviour
         // Once delay is reached, move
         if (storedPositions.Count > followDistance)
         {
-            // If infinite mode, diff behaviour
-            if (SceneManager.GetActiveScene().name == "LevelInf")
-            {
-                transform.position = new Vector3(storedPositions[0].x, player.transform.position.y, player.transform.position.z - ((followDistance / 5) + 0.3f));
-            }
-            else
-            {
-                transform.position = storedPositions[0];
-            }
+            transform.position = new Vector3(storedPositions[0].x, player.transform.position.y, player.transform.position.z - ((followDistance / 5) + 0.3f));
             storedPositions.RemoveAt(0);
         }
     }

@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    float restartDelay = 4f;
     public bool gameOver = false;
     public bool gameWin = false;
     public int foodEaten = 0;

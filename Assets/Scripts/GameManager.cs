@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public int foodEaten = 0;
 
     public GameObject levelCompleteUI;
+    public GameObject levelFailedUI;
 
     public void FoodEaten()
     {
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
         {
             // Reset current level
             gameOver = true;
-            Invoke("Restart", restartDelay);
+            levelFailedUI.SetActive(true);
         }
         
     }

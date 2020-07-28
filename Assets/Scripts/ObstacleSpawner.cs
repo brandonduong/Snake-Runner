@@ -11,6 +11,8 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject zigzag;
     public GameObject slide;
     public GameObject penguin;
+    public GameObject fish;
+    public GameObject barrel;
 
     public int obstaclesNum = 4;
 
@@ -29,6 +31,9 @@ public class ObstacleSpawner : MonoBehaviour
     float timeBetweenZigZags = 0.5f;
     
     float timeBetweenSlides = 1f;
+
+    int numFish = 30;
+    int fishOffset = -3;
 
     // Speedup intervals
     public float speedupIntervals = 5f;
@@ -69,6 +74,10 @@ public class ObstacleSpawner : MonoBehaviour
 
                 case 4:
                     SpawnPenguins();
+                    break;
+
+                case 5:
+                    SpawnBarrels();
                     break;
             }
 
@@ -127,7 +136,26 @@ public class ObstacleSpawner : MonoBehaviour
         for (int i = 0; i < spawnPoints.Length; i++)
         {
             // Quaternion.identity = do no rotation
-            Instantiate(penguin, spawnPoints[i].position, Quaternion.identity);
+            Instantiate(penguin, spawnPoints[i].position, Quaternion.Euler(-90f, 0f, 0f));
+        }
+
+        for (int i = 0; i < numFish; i++)
+        {
+            Instantiate(fish, spawnPoints[3].position + new Vector3(0, i, fishOffset), Quaternion.identity);
+        }
+    }
+
+    void SpawnBarrels()
+    {
+        for (int o = 0; o < 3; o++)
+        {
+            Instantiate(barrel, spawnPoints[0].position + new Vector3(0, o * 4f, -5), Quaternion.identity);
+            Instantiate(barrel, spawnPoints[1].position + new Vector3(0, o * 4f, 0), Quaternion.identity);
+            Instantiate(barrel, spawnPoints[2].position + new Vector3(0, o * 4f, -5), Quaternion.identity);
+            Instantiate(barrel, spawnPoints[3].position + new Vector3(0, o * 4f, 0), Quaternion.identity);
+            Instantiate(barrel, spawnPoints[4].position + new Vector3(0, o * 4f, -5), Quaternion.identity);
+            Instantiate(barrel, spawnPoints[5].position + new Vector3(0, o * 4f, 0), Quaternion.identity);
+            Instantiate(barrel, spawnPoints[6].position + new Vector3(0, o * 4f, -5), Quaternion.identity);
         }
     }
 }

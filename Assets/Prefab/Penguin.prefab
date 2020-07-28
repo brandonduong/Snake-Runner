@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8160440623254964779}
   - component: {fileID: 7076280946315790731}
   - component: {fileID: -8317421952888099979}
+  - component: {fileID: -8553673643788218097}
   m_Layer: 0
   m_Name: Penguin
   m_TagString: Untagged
@@ -120,7 +121,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7906495763004107107}
   serializedVersion: 2
-  m_Mass: 0.05
+  m_Mass: 0.01
   m_Drag: 0
   m_AngularDrag: 0.01
   m_UseGravity: 1
@@ -140,3 +141,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3dbaeb06748bac45808bea7b9822196, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 7076280946315790731}
+--- !u!114 &-8553673643788218097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7906495763004107107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bb58514e36be447a276595d119160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 6464656431845138606, guid: d7d2409b18435db4290fbbb376e38321, type: 3}

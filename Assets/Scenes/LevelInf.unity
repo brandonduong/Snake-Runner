@@ -223,7 +223,9 @@ MonoBehaviour:
   zigzag: {fileID: 8772166353214157385, guid: 017ea7629e17b7b4ab23e94de4390bf1, type: 3}
   slide: {fileID: 5954529481568668397, guid: d1c59d33b73bab042a54f094d7cd006e, type: 3}
   penguin: {fileID: 7906495763004107107, guid: db1401eb2db611a418c2636dbca59143, type: 3}
-  obstaclesNum: 5
+  fish: {fileID: 4564252833655434710, guid: add25bc1d685f3c4c9e90cef055c0d9d, type: 3}
+  barrel: {fileID: 1616317968064116100, guid: a6d8cf63755ae694bbd56f113b772757, type: 3}
+  obstaclesNum: 6
   speedupIntervals: 10
   speedup: {x: 0, y: 0, z: -5}
 --- !u!4 &424356037
@@ -234,7 +236,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424356035}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 90}
+  m_LocalPosition: {x: 0, y: 1, z: 150}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1900605000}

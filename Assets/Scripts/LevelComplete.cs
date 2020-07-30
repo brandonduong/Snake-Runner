@@ -5,18 +5,18 @@ public class LevelComplete : MonoBehaviour
 {
     public void NextLevel()
     {
-        if (SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCount)
+        if (SceneManager.GetActiveScene().buildIndex + 1 > SceneManager.sceneCountInBuildSettings - 2)
         {
-            SceneManager.LoadScene("Menu");
+            Menu();
             return;
         }
 
         // Load next scene in queue (Presumably the next level)
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        FindObjectOfType<FadeInOut>().FadeToScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        FindObjectOfType<FadeInOut>().FadeToScene("Menu");
     }
 }

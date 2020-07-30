@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool moveRight = false;
     public bool canJump = false;
 
-    public Vector3 constantForwardSpeed;
+    public float constantForwardSpeed;
     public float constantSidewaysSpeed;
     // public Vector3 jumpForce;
 
@@ -48,11 +48,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Reads ALL horizontal keys
         float x = Input.GetAxisRaw("Horizontal") * Time.fixedDeltaTime * constantSidewaysSpeed;
-        rb.MovePosition(rb.position + Vector3.right * x);
-
+        float z = Time.fixedDeltaTime * constantForwardSpeed;
+        rb.MovePosition(rb.position + Vector3.right * x + Vector3.forward * z);
+        
         // VelocityChange for constant speed
-        Vector3 velocityChange = constantForwardSpeed - new Vector3(0, 0, rb.velocity.z);
-        rb.AddForce(velocityChange * Time.fixedDeltaTime, ForceMode.VelocityChange);
+        // Vector3 velocityChange = constantForwardSpeed - new Vector3(0, 0, rb.velocity.z);
+        // rb.AddForce(velocityChange * Time.fixedDeltaTime, ForceMode.VelocityChange);
 
         // Note: Time.deltaTime is the amount of seconds the computer drew the last frame
         /*

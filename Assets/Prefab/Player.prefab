@@ -128,7 +128,7 @@ MonoBehaviour:
   moveLeft: 0
   moveRight: 0
   canJump: 0
-  constantForwardSpeed: {x: 0, y: 0, z: 30}
+  constantForwardSpeed: 23
   constantSidewaysSpeed: 20
 --- !u!114 &9052079553030206658
 MonoBehaviour:

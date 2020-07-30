@@ -6,16 +6,18 @@ public class PlayerCollision : MonoBehaviour
     public Rigidbody rb;
 
     public GameObject remains;
+    bool hit;
 
     void Start()
     {
         Rigidbody rb = GetComponent<Rigidbody>();
+        hit = false;
     }
 
     // Called whenever current objects collides with something (Needs a rigid boy + collider)
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.tag == "Obstacle" || collision.collider.tag == "DeathFloor")
+        if ((collision.collider.tag == "Obstacle" || collision.collider.tag == "DeathFloor") && !hit)
         {
             Debug.Log("Hit obstacle!");
 
@@ -27,6 +29,8 @@ public class PlayerCollision : MonoBehaviour
 
             // Allow model to ragdoll after loss
             rb.freezeRotation = false;
+
+            hit = true;
         }
 
         if (!movement.enabled && collision.collider.tag == "Ground" || collision.collider.tag == "DeathFloor")

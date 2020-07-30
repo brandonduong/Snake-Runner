@@ -37,6 +37,11 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        if (!GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>().enabled)
+        {
+            return;
+        }
+
         Debug.Log("Level won");
         gameWin = true;
 

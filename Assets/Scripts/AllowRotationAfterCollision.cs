@@ -9,7 +9,6 @@ public class AllowRotationAfterCollision : MonoBehaviour
     {
         if (!FindObjectOfType<GameManager>().gameOver && collision.collider.tag != "DeathFloor" && collision.collider.tag != "Ground")
         {
-            Debug.Log(collision.collider.tag);
             // Allow model to ragdoll after loss
             rb.freezeRotation = false;
             rb.AddExplosionForce(10f, rb.position, 10f);

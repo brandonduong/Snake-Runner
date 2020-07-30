@@ -16,6 +16,8 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject largeWallL;
     public GameObject largeWallR;
     public GameObject bouncyBall;
+    public GameObject movingWall;
+    public GameObject movingFood;
 
     public int obstaclesNum = 4;
 
@@ -37,8 +39,14 @@ public class ObstacleSpawner : MonoBehaviour
 
     float timeBetweenBalls = 0.5f;
 
+    float timeBetweenMovingWalls = 0.5f;
+
     int numFish = 30;
     int fishOffset = -3;
+    int minBouncyBalls = 5;
+    int maxBouncyBalls = 10;
+    int minMovingWalls = 3;
+    int maxMovingWalls = 7;
 
     // Speedup intervals
     public float speedupIntervals = 5f;
@@ -95,6 +103,10 @@ public class ObstacleSpawner : MonoBehaviour
 
                 case 8:
                     SpawnBouncyBalls();
+                    break;
+
+                case 9:
+                    SpawnMovingWalls();
                     break;
             }
 
@@ -190,7 +202,7 @@ public class ObstacleSpawner : MonoBehaviour
     {
         timeBetweenSpawnsAdder = 0;
 
-        for (int i = 0; i < Random.Range(5, 10); i++)
+        for (int i = 0; i < Random.Range(minBouncyBalls, maxBouncyBalls); i++)
         {
             int randomNum = Random.Range(0, spawnPoints.Length);
 
@@ -198,6 +210,21 @@ public class ObstacleSpawner : MonoBehaviour
             
             // More balls = more time delay
             timeBetweenSpawnsAdder += timeBetweenBalls;
+        }
+    }
+
+    void SpawnMovingWalls()
+    {
+        timeBetweenSpawnsAdder = 0;
+
+        for (int i = 0; i < Random.Range(minMovingWalls, maxMovingWalls); i++)
+        {
+            int randomNum = Random.Range(0, spawnPoints.Length);
+
+            Instantiate(movingWall, spawnPoints[randomNum].position + new Vector3(0, 0, 0 + (15 * i)), Quaternion.identity);
+            Instantiate(movingFood, spawnPoints[randomNum].position + new Vector3(0, 0, 7.5f + (15f * i)), Quaternion.identity);
+
+            timeBetweenSpawnsAdder += timeBetweenMovingWalls;
         }
     }
 }

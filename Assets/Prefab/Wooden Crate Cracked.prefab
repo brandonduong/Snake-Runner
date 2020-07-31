@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4752768954203096}
   - component: {fileID: -8798605711760143104}
+  - component: {fileID: -6383829633750885598}
   m_Layer: 0
   m_Name: Wooden Crate Cracked
   m_TagString: Untagged
@@ -178,6 +179,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6383829633750885598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168907351885854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bb58514e36be447a276595d119160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 6464656431845138606, guid: d7d2409b18435db4290fbbb376e38321, type: 3}
 --- !u!1 &1213141409305074
 GameObject:
   m_ObjectHideFlags: 0

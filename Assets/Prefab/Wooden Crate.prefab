@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2781061077313233547}
   - component: {fileID: -5402790796878056925}
   - component: {fileID: -5698394287503845780}
+  - component: {fileID: -5610686133293497778}
   m_Layer: 0
   m_Name: Wooden Crate
   m_TagString: Untagged
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 1168907351885854, guid: b3dc6d5c1ab8158418b2f82094975753,
     type: 3}
+--- !u!114 &-5610686133293497778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011275823026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98bb58514e36be447a276595d119160b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 6464656431845138606, guid: d7d2409b18435db4290fbbb376e38321, type: 3}

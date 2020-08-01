@@ -12,7 +12,6 @@ public class Bomb : MonoBehaviour
     {
         if (exploded == false && collision.collider.tag == "Player")
         {
-            Debug.Log("Exploded");
             Explode();
         }
     }

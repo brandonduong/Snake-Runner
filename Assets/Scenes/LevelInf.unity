@@ -304,7 +304,9 @@ MonoBehaviour:
     type: 3}
   movingFood: {fileID: 8674134656682923521, guid: 4fbfb126783a3c749bd0b25371deba85,
     type: 3}
-  obstaclesNum: 10
+  foodSnake: {fileID: 7511573822540805987, guid: 2f0adc82d5867fb4aaf888c6679c3c51,
+    type: 3}
+  obstaclesNum: 11
   speedupIntervals: 10
   speedup: {x: 0, y: 0, z: -5}
 --- !u!4 &424356037
@@ -1311,6 +1313,11 @@ PrefabInstance:
     - target: {fileID: 9052079553030206659, guid: 9be04e6b42f069e478083d05f56d0b20,
         type: 3}
       propertyPath: constantForwardSpeed.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9052079553030206659, guid: 9be04e6b42f069e478083d05f56d0b20,
+        type: 3}
+      propertyPath: constantForwardSpeed
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9052079553030206661, guid: 9be04e6b42f069e478083d05f56d0b20,

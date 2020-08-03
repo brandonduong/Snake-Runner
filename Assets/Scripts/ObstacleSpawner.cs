@@ -18,6 +18,7 @@ public class ObstacleSpawner : MonoBehaviour
     public GameObject bouncyBall;
     public GameObject movingWall;
     public GameObject movingFood;
+    public GameObject foodSnake;
 
     public int obstaclesNum = 4;
 
@@ -40,6 +41,8 @@ public class ObstacleSpawner : MonoBehaviour
     float timeBetweenBalls = 0.5f;
 
     float timeBetweenMovingWalls = 0.5f;
+
+    float timeBetweenFoodSnake = 1f;
 
     int numFish = 30;
     int fishOffset = -3;
@@ -107,6 +110,10 @@ public class ObstacleSpawner : MonoBehaviour
 
                 case 9:
                     SpawnMovingWalls();
+                    break;
+
+                case 10:
+                    SpawnFoodSnake();
                     break;
             }
 
@@ -226,5 +233,12 @@ public class ObstacleSpawner : MonoBehaviour
 
             timeBetweenSpawnsAdder += timeBetweenMovingWalls;
         }
+    }
+
+    void SpawnFoodSnake()
+    {
+        Instantiate(foodSnake, spawnPoints[3].position, Quaternion.identity);
+
+        timeBetweenSpawnsAdder += timeBetweenFoodSnake;
     }
 }

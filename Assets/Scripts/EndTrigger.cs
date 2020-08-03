@@ -9,6 +9,9 @@ public class EndTrigger : MonoBehaviour
         // If player triggers location, win game
         if (other.tag == "Player")
         {
+            // Play sound
+            AudioManager.instance.PlaySound("playerWin");
+
             gameManager.WinGame();
         }
     }

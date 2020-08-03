@@ -13,6 +13,10 @@ public class FoodCollision : MonoBehaviour
         {
             Debug.Log("Player hit food!");
             FindObjectOfType<GameManager>().FoodEaten();
+
+            // Play sound
+            AudioManager.instance.PlaySound("eatFood");
+
             Destroy(gameObject);
 
             // Create 1 segment of snake

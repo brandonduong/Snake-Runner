@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     public GameObject levelFailedUI;
     public GameObject foodEatenUpUI;
 
+    public void Start()
+    {
+        AudioManager.instance.PlaySound("backgroundSong");
+    }
+
     public void FoodEaten()
     {
         foodEaten += 1;

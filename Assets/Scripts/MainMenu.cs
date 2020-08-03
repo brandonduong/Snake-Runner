@@ -3,17 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-
-    public void PlayGame()
+    public void Start()
     {
-        // Load next scene in queue
-        FindObjectOfType<FadeInOut>().FadeToScene("LevelSelect");
-    }
-
-    public void InfiniteGame()
-    {
-        // Load infinite mode scene
-        FindObjectOfType<FadeInOut>().FadeToScene("LevelInf");
+        AudioManager.instance.PlaySound("menuSong");
     }
 
     public void QuitGame()

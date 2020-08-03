@@ -42,7 +42,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     float timeBetweenMovingWalls = 0.5f;
 
-    float timeBetweenFoodSnake = 1f;
+    float timeBetweenFoodSnake = 2f;
 
     int numFish = 30;
     int fishOffset = -3;

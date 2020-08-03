@@ -6,11 +6,12 @@ public class LevelFailed : MonoBehaviour
     public void RetryLevel()
     {
         // Load same scene
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        FindObjectOfType<FadeInOut>().FadeToScene(SceneManager.GetActiveScene().name);
     }
 
     public void Menu()
     {
-        SceneManager.LoadScene("Menu");
+        FindObjectOfType<FadeInOut>().FadeToScene("Menu");
+        Destroy(FindObjectOfType<AudioManager>().gameObject);
     }
 }

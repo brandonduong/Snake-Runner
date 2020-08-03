@@ -6,5 +6,6 @@ public class LevelSelector : MonoBehaviour
     public void Select(string levelName)
     {
         FindObjectOfType<FadeInOut>().FadeToScene(levelName);
+        Destroy(FindObjectOfType<AudioManager>().gameObject);
     }
 }

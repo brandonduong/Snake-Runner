@@ -32,7 +32,7 @@ public class Bomb : MonoBehaviour
                 rb.AddExplosionForce(explosionForce, transform.position, blastRadius);
             }
         }
-
+        AudioManager.instance.PlaySound("bomb");
         Destroy(gameObject);
     }
 }

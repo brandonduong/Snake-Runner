@@ -21,6 +21,10 @@ public class PlayerCollision : MonoBehaviour
         {
             Debug.Log("Hit obstacle!");
 
+            // Play sound
+            // gameObject.SendMessage("PlaySound", "playerHit");
+            AudioManager.instance.PlaySound("playerHit");
+
             // Pops player up a bit after collision
             rb.AddExplosionForce(1000f, rb.position, 10f);
 
@@ -50,6 +54,11 @@ public class PlayerCollision : MonoBehaviour
     void Break()
     {
         Instantiate(remains, transform.position, transform.rotation);
+
+        // Play sound
+        // gameObject.SendMessage("PlaySound", "playerDeath");
+        AudioManager.instance.PlaySound("playerDeath");
+
         Destroy(gameObject);
     }
 }

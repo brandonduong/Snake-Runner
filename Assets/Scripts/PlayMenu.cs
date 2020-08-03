@@ -14,5 +14,6 @@ public class PlayMenu : MonoBehaviour
     {
         // Load infinite mode scene
         FindObjectOfType<FadeInOut>().FadeToScene("LevelInf");
+        Destroy(FindObjectOfType<AudioManager>().gameObject);
     }
 }
